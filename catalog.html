@@ -1,1 +1,98 @@
-<p>Тест</p>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+  </head>
+  <body>
+
+<!-- Шапка -->
+    <header class="main-header">
+      <img class="logo" src="" alt="Лoготип магазина Device" >      
+      <form class="search-form" method="get" action="http://echo.htmlacademy.ru/">
+        <input type="text" class="main-header-search" name="search-input" placeholder="Текст поиска">
+        <button type="submit" class="search-button">Найти</button>
+      </form>
+      <a href="#">Войти</a>
+      <a href="#">Сравнить</a>
+      <a href="#">Корзина</a>
+      <nav class="main-header-navigation">
+        <ul class="main-header-menu">
+          <li class="main-header-menu-item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-header-menu-item"><a href="#">Доставка</a></li>
+          <li class="main-header-menu-item"><a href="#">Гарантия</a></li>
+          <li class="main-header-menu-item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header> 
+
+<!-- Основной раздел каталога-->
+
+    <main>
+        <header class="inner-header">
+            <h1 class="inner-header-title">Моноподы для селфи</h1>  
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs-item">
+                  <a class="breadcrumbs-link" href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs-item">
+                  <a class="breadcrumbs-link">Каталог товаров</a>
+                </li>
+                <li class="breadcrumbs-item">
+                    <a class="breadcrumbs-link">Моноподы для селфи</a>
+                  </li>
+              </ul>
+        </header>
+        <section class="catalog-products">
+            <h2>Фильтры</h2>
+            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+
+                <button class="button" type="submit">Показать</button>
+              </form>
+          </section>
+    </main>
+    
+<!-- Подвал -->
+<footer class="main-footer">
+    <section class="footer-first">
+      <img class="logo" src="" alt="Лoготип магазина Device" > 
+      <address class="main-footer-address">
+        <p class="main-footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>          
+      </address>
+      <ul class="main-footer-nav-list">
+        <li class="main-footer-nav-item">
+          <a href="#">Доставка</a>
+        </li>
+        <li class="main-footer-nav-item">
+          <a href="#">Гарантия</a>
+        </li>
+        <li class="main-footer-nav-item">
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+      <address class="main-footer-adddress">          
+        <a class="main-footer-contacts-phone" href="tel:88128121212">8 812 812-12-12</a>
+      </address>
+    </section>
+    <section class="footer-second">
+      <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
+          <a href="#">Facebook</a>
+        </li>
+        <li class="footer-social-item">
+          <a href="#">Instagram</a>
+        </li>
+        <li class="footer-social-item">
+          <a href="#">Twitter</a>
+        </li>
+      </ul>
+      <div class="footer-link-academy">
+        <a class="htmlacdademy-link" href="https://htmlacademy.ru/">
+          <img src="" class="footer-link-academy" alt="html академия">
+        </a>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>
