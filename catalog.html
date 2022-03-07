@@ -19,19 +19,19 @@
           <button class="search-button" type="submit">Найти</button>
         </form>
         <nav class="header-user-navigation">
-          <a class="header-user-navigation-item" href="#">Войти</a>
-          <a class="header-user-navigation-item" href="#">Сравнить</a>
-          <a class="header-user-navigation-item" href="#">Корзина</a>
+          <a class="header-user-navigation-item header-user-navigation-item-login" href="#">Войти</a>
+          <a class="header-user-navigation-item header-user-navigation-item-compare" href="#">Сравнить</a>
+          <a class="header-user-navigation-item header-user-navigation-item-cart" href="#">Корзина</a>
         </nav>
       </div>
       <nav class="header-navigation">
-        <a class="header-navigation-item main-header-navigation-item-catalog" href="catalog.html">Каталог
+        <a class="header-navigation-item header-navigation-item-catalog" href="catalog.html">Каталог
           товаров</a>
-        <a class="header-menu-item" href="#">Доставка</a>
-        <a class="header-menu-item" href="#">Гарантия</a>
-        <a class="header-menu-item" href="#">Контакты</a>
+        <a class="header-navigation-item" href="#">Доставка</a>
+        <a class="header-navigation-item" href="#">Гарантия</a>
+        <a class="header-navigation-item header-navigation-item-contacts" href="#">Контакты</a>
       </nav>
-      <div>
+    <div>
   </header>
 
   <!-- Основной раздел каталога-->
@@ -51,9 +51,11 @@
         </li>
       </ul>
     </header>
+
     <section class="catalog-products">
-      <h2>Фильтр:</h2>
+
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/">
+        <h2>Фильтр:</h2>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Стоимость</legend>
           <!-- тут пока непонятно как делать -->
@@ -114,7 +116,7 @@
         </fieldset>
         <button class="button" type="submit">Показать</button>
       </form>
-      <div class="catalog-right-column">
+      <div class="catalog-cards">
         <h2>Сортировка:</h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Популярные</option>
@@ -157,15 +159,12 @@
             <b class="product-card-price">1500 ₽</b>
 
           </article>
-        </section>
-        <a class="show-more" href="catalog.html?more">Загрузить ещё</a>
+          <a class="show-more" href="catalog.html?more">Загрузить ещё</a>
 
+        <div class="pagination-full">
+        <a class="pagination-link pagination-prev pagination-disabled">Назад</a>
         <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-prev pagination-disabled">
-              <span class="visually-hidden">Назад</span>
-            </a>
-          </li>
+
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
           </li>
@@ -181,14 +180,15 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">15</a>
           </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#">
-              <span class="visually-hidden">Вперед</span>
-            </a>
-          </li>
+
         </ul>
+            <a class="pagination-link pagination-next" href="#">Вперед</a>
+        </div>
+        </section>
+
     </section>
   </main>
+
 
   <!-- Подвал -->
   <footer class="footer">
@@ -200,33 +200,23 @@
         <address class="footer-address">
           <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
+        <div class="yellow-line">
 
+        </div>
       </section>
       <section class="footer-links">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#">Гарантия</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
+        <nav class="footer-nav-list">
+          <a class="footer-nav-item" href="#">Доставка</a>
+          <a class="footer-nav-item" href="#">Гарантия</a>
+          <a class="footer-nav-item" href="#">Контакты</a>
+        </nav>
 
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a href="#">Facebook</a>
-          </li>
-          <li class="footer-social-item">
-            <a href="#">Instagram</a>
-          </li>
-          <li class="footer-social-item">
-            <a href="#">Twitter</a>
-          </li>
-        </ul>
+        <nav class="footer-social-list">
+          <a class="footer-social-item" href="#">Facebook</a>
+          <a class="footer-social-item" href="#">Instagram</a>
+          <a class="footer-social-item" href="#">Twitter</a>
+        </nav>
 
       </section>
       <section class="footer-contacts">

@@ -19,19 +19,21 @@
           <button class="search-button" type="submit">Найти</button>
         </form>
         <nav class="header-user-navigation">
-          <a class="header-user-navigation-item" href="#">Войти</a>
-          <a class="header-user-navigation-item" href="#">Сравнить</a>
-          <a class="header-user-navigation-item" href="#">Корзина</a>
+          <a class="header-user-navigation-item header-user-navigation-item-login" href="#">Войти</a>
+          <a class="header-user-navigation-item header-user-navigation-item-compare" href="#">Сравнить</a>
+          <a class="header-user-navigation-item header-user-navigation-item-cart" href="#">Корзина</a>
+
         </nav>
       </div>
       <nav class="header-navigation">
-        <a class="header-navigation-item main-header-navigation-item-catalog" href="catalog.html">Каталог
+        <a class="header-navigation-item header-navigation-item-catalog" href="catalog.html">Каталог
           товаров</a>
-        <a class="header-menu-item" href="#">Доставка</a>
-        <a class="header-menu-item" href="#">Гарантия</a>
-        <a class="header-menu-item" href="#">Контакты</a>
+        <a class="header-navigation-item" href="#">Доставка</a>
+        <a class="header-navigation-item" href="#">Гарантия</a>
+        <a class="header-navigation-item header-navigation-item-contacts" href="#">Контакты</a>
+
       </nav>
-      <div>
+    <div>
   </header>
 
   <!-- Основной раздел -->
@@ -89,26 +91,14 @@
     </section>
     <section class="categories">
       <h2 class="visually-hidden">Категории товаров</h2>
-      <ul class="categories-list">
-        <li>
-          <a class="categories-link vr" href="#">Виртуальная реальность</a>
-        </li>
-        <li>
-          <a class="categories-link monopod" href="#">Моноподы для селфи</a>
-        </li>
-        <li>
-          <a class="categories-link action" href="#">Экшн-камеры</a>
-        </li>
-        <li>
-          <a class="categories-link fitnes" href="#">Фитнес-браслеты</a>
-        </li>
-        <li>
-          <a class="categories-link clock" href="#">Умные часы</a>
-        </li>
-        <li>
-          <a class="categories-link quadro" href="#">Квадрокоптеры</a>
-        </li>
-      </ul>
+      <div class="categories-list">
+        <a class="categories-link vr" href="#">Виртуальная реальность</a>
+        <a class="categories-link monopod" href="#">Моноподы для селфи</a>
+        <a class="categories-link action" href="#">Экшн-камеры</a>
+        <a class="categories-link fitnes" href="#">Фитнес-браслеты</a>
+        <a class="categories-link clock" href="#">Умные часы</a>
+        <a class="categories-link quadro" href="#">Квадрокоптеры</a>
+      </div>
     </section>
     <section class="services">
       <h2 class="visually-hidden">Услуги</h2>
@@ -127,7 +117,7 @@
           <dt class="services-list-item">
             <button class="button" type="button">Гарантия</button>
           </dt>
-          <dd class="services-items">
+          <dd class="services-items visually-hidden">
             <h3 class="service-item-title">Гарантия</h3>
             <p class="service-item-description">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
@@ -137,7 +127,7 @@
           <dt class="services-list-item">
             <button class="button" type="button">Кредит</button>
           </dt>
-          <dd class="services-items">
+          <dd class="services-items visually-hidden">
             <h3 class="service-item-title">Кредит</h3>
             <p class="service-item-description">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
@@ -179,16 +169,18 @@
       </section>
     </div>
     <section class="subscribe">
-      <div class="subscribe-first">
-        <h2>Подпишитесь на рассылку</h2>
+      <div class="subscribe-top">
+        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p>Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции,
           спецпредложения и вот это вот всё.</p>
       </div>
+      <div class="subscribe-bottom">
       <form class="subscribe-form" method="get" action="http://echo.htmlacademy.ru/">
         <input type="email" class="subscribe-email" name="subscribe-input" placeholder="Ваш e-mail">
         <button type="submit" class="subscribe-button">ПОДПИСАТЬСЯ</button>
       </form>
       <p>Это бесплатно</p>
+      </div>
     </section>
   </main>
 
@@ -202,33 +194,23 @@
         <address class="footer-address">
           <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
+        <div class="yellow-line">
 
+        </div>
       </section>
       <section class="footer-links">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#">Гарантия</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
+        <nav class="footer-nav-list">
+          <a class="footer-nav-item" href="#">Доставка</a>
+          <a class="footer-nav-item" href="#">Гарантия</a>
+          <a class="footer-nav-item" href="#">Контакты</a>
+        </nav>
 
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a href="#">Facebook</a>
-          </li>
-          <li class="footer-social-item">
-            <a href="#">Instagram</a>
-          </li>
-          <li class="footer-social-item">
-            <a href="#">Twitter</a>
-          </li>
-        </ul>
+        <nav class="footer-social-list">
+          <a class="footer-social-item" href="#">Facebook</a>
+          <a class="footer-social-item" href="#">Instagram</a>
+          <a class="footer-social-item" href="#">Twitter</a>
+        </nav>
 
       </section>
       <section class="footer-contacts">
