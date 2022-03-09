@@ -1,5 +1,6 @@
 @font-face {
   font-family: raleway;
+  font-style: normal;
   font-weight: 800;
   src: url("fonts/raleway/raleway-800.woff2") format("woff2");
   font-display: swap;
@@ -29,9 +30,9 @@
   font-display: swap;
 }
 
-/* * {
+ * {
   outline: 1px solid red;
-} */
+}
 
 html {
   height: 100%;
@@ -102,7 +103,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   letter-spacing: 0.2em;
@@ -175,7 +176,7 @@ body {
   display: flex;
 }
 .contacts h2 {
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 50px;
   color: #000000;
   font-weight: 800;
@@ -191,13 +192,17 @@ body {
 }
 
 .button {
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   background-color: #FFE17F;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  font-size: 18px;
   font-weight: 800;
   line-height: 21px;
+  letter-spacing: 0.2em;
+  text-align: center;
+
 }
 
 .product-params {
@@ -288,29 +293,41 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-
-
 }
 
 .delivery-extra {
   display: flex;
-  font-size: 20px;
-  color: #000000;
-  font-weight: 800;
   margin-bottom: 70px;
   background-color: #F0F0F0;
+}
 
+.delivery-extra-img {
+  width: 125px;
+}
+
+.delivery-extra-info {
+  width: 125px;
 }
 
 .delivery-extra p {
-  margin: 0 auto;
-  padding: 40px 125px;
+  margin: 40px auto;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #000000;
+  font-weight: 800;
 }
 
 .about-contact {
   display: flex;
 }
-
+.black-line{
+  border-top: #000 7px solid;
+  width: 84px;
+}
+.about {
+  margin-right: 108px;
+  width: 520px;
+}
 .about h2 {
   font-family: raleway, Arial, sans-serif;
   font-size: 50px;
@@ -318,10 +335,12 @@ body {
   font-weight: 800;
   color: #000000;
   margin-bottom: 48px;
+  margin-top: 40px;
 }
 
 .about p {
   margin-bottom: 30px;
+  width: 497px;
 }
 
 .about ul {
@@ -330,8 +349,12 @@ body {
 
 .about ul {
   color: #000000;
+  font-weight: 700;
 }
 
+.contacts {
+  width: 532px;
+}
 .contacts h2 {
   margin-bottom: 48px;
   line-height: 50px;
@@ -355,12 +378,17 @@ body {
 
 .contacts-schedule {
   margin-bottom: 30px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .subscribe-top {
   display: flex;
+  /* grid-template-columns: 50% 50%; */
   margin-top: 64px;
   margin-bottom: 144px;
+  align-items: baseline;
+
 }
 .subscribe-title {
   font-family: raleway, Arial, sans-serif;
@@ -368,6 +396,13 @@ body {
   line-height: 50px;
   color: #000000;
   font-weight: 800;
+  /* width: 400px; */
+  padding: 0;
+  margin-right: 250px;
+}
+.subscribe-description {
+  margin: 0;
+  padding: 0;
 }
 
 .subscribe-bottom {
