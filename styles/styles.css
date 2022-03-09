@@ -606,15 +606,17 @@ body {
 
 .descr-price {
   display: flex;
+  justify-content: space-between;
 }
-.product-card-link {
+
+.product-card-title {
+  width: 226px;
+  margin: 0;
   text-decoration: none;
   color: #000000;
+  font-size: 18px;
   font-weight: 700;
   line-height: 20px;
-}
-.product-card-title {
-  margin: 0;
 }
 
 .product-card-price {
@@ -637,6 +639,7 @@ body {
   padding: 18px 0;
   text-align: center;
   text-decoration: none;
+  letter-spacing: 0.2em;
 }
 
 .pagination-full {
@@ -677,4 +680,5 @@ body {
   color: #000000;
   text-transform: uppercase;
   width: 140px;
+  letter-spacing: 0.2em;
 }
