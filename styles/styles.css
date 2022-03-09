@@ -251,15 +251,15 @@ body {
   grid-template-columns: 280px 1fr;
   grid-gap: 10px;
 }
- .services-list-item-delivery{
+ .services-list-delivery{
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.services-list-item-warranty{
+.services-list-warranty{
   grid-column: 1/2;
   grid-row: 2/3;
 }
-.services-list-item-credit{
+.services-list-credit{
   grid-column: 1/2;
   grid-row: 3/4;
 }
@@ -271,8 +271,8 @@ body {
 
 .services-items {
   margin: 0 63px 0 116px;
-  grid-column: 2 / -1;
-  grid-row: 1/-1;
+  grid-column: 2/-1;
+  grid-row: 1/4;
 }
 
 .services-btn {
