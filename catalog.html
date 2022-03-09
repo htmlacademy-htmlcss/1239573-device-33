@@ -53,7 +53,6 @@
     </header>
 
     <section class="catalog-products">
-
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/">
         <h2>Фильтр:</h2>
         <fieldset class="catalog-filter-group">
@@ -117,12 +116,16 @@
         <button class="button" type="submit">Показать</button>
       </form>
       <div class="catalog-cards">
-        <h2>Сортировка:</h2>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="popular">Популярные</option>
-        </select>
-        <a class="sort-asc" href="catalog.html?sort=ASC">Asc</a>
-        <a class="sort-desc" href="catalog.html?sort=DESC">Desc</a>
+        <div class="catalog-cards-inner">
+          <h2>Сортировка:</h2>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="popular">Популярные</option>
+          </select>
+          <div class="asc-desc">
+            <a class="sort-asc" href="catalog.html?sort=ASC">Asc</a>
+            <a class="sort-desc" href="catalog.html?sort=DESC">Desc</a>
+          </div>
+        </div>
         <section class="product-list">
           <article class="product-card">
             <a class="product-card-link" href="#">
