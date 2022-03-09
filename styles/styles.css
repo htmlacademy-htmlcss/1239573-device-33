@@ -30,9 +30,9 @@
   font-display: swap;
 }
 
- * {
+ /* * {
   outline: 1px solid red;
-}
+} */
 
 html {
   height: 100%;
@@ -241,19 +241,15 @@ body {
   color: #000000;
 }
 
-.services-container {
-  display: flex;
-  margin-bottom: 70px;
-}
-
 .services-list {
   display: grid;
   grid-template-columns: 280px 1fr;
-  grid-gap: 10px;
+  grid-gap: 35px 0;
 }
  .services-list-delivery{
   grid-column: 1/2;
   grid-row: 1/2;
+  padding-top: 64px;
 }
 .services-list-warranty{
   grid-column: 1/2;
@@ -262,17 +258,31 @@ body {
 .services-list-credit{
   grid-column: 1/2;
   grid-row: 3/4;
+  padding-bottom: 64px;
 }
 
+.services-list button {
+  border: none;
+}
 .services-list-item-current button {
   background-color: #000000;
-  color:#ffffff;
+  color:#FFE17F;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+
 }
 
 .services-items {
-  margin: 0 63px 0 116px;
   grid-column: 2/-1;
   grid-row: 1/4;
+  border-left-style: solid;
+  border-left-color: #000;
+  border-width: 7px;
+  margin: 0;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 116px;
 }
 
 .services-btn {
@@ -292,7 +302,11 @@ body {
   font-weight: 800;
   margin: 0;
   padding: 0;
-  text-align: center;
+  /* text-align: center; */
+  margin-bottom: 34px;
+}
+.service-item-description {
+  width: 452px;
 }
 
 .delivery-extra {
@@ -315,6 +329,7 @@ body {
   font-size: 20px;
   color: #000000;
   font-weight: 800;
+  letter-spacing: 0.2em;
 }
 
 .about-contact {
@@ -345,6 +360,7 @@ body {
 
 .about ul {
   margin-bottom: 30px;
+  padding-left: 20px;
 }
 
 .about ul {
@@ -639,6 +655,7 @@ body {
   margin: 0;
   padding: 0;
   width: 200px;
+
 
 }
 
