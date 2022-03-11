@@ -30,9 +30,9 @@
   font-display: swap;
 }
 
-/* * {
+* {
   outline: 1px solid red;
-} */
+}
 
 html {
   height: 100%;
@@ -61,14 +61,34 @@ body {
   overflow: hidden;
 }
 
-
 .header-container {
   color: #000000;
   background-color: #FFE17F;
+  /* непонятно как сделать фон "сдвинутым",
+  чтобы наезжал на лого и "Порхает" */
   width: 1040px;
   margin-left: auto;
   margin-right: auto;
   padding: 30px 60px;
+}
+.logo{
+  display: block;
+  border: 2px solid transparent;
+  /* пришлось добавить прозрачный border,
+  чтобы лого не "прыгал" при наведении,
+  не получилось сделать через box-sizing: border-box; */
+  width: 145px;
+  height: 36px;
+}
+
+.logo:hover{
+  opacity: 0.6;
+}
+.logo:active{
+  opacity: 0.3;
+}
+.logo:focus{
+  border: 2px solid #AF4FFF;
 }
 
 .header-top {
@@ -84,21 +104,60 @@ body {
 }
 
 .header-user-navigation {
+  position: relative;
   width: 600px;
   display: flex;
   flex-wrap: wrap;
+  margin: 5px 0;
 }
 
 .header-user-navigation-item {
   text-align: right;
-  min-width: 130px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  border: 2px solid transparent;
+}
+.header-user-navigation-item:hover{
+  opacity: 0.6;
+}
+.header-user-navigation-item:active{
+  opacity: 0.3;
+}
+.header-user-navigation-item:focus{
+  border: 2px solid #AF4FFF;
 }
 
 .header-user-navigation-item-login {
   margin-right: auto;
+  width: 81px;
+  background-image: url('../images/login.svg');
+  margin-left: 26px;
+}
+
+.header-user-navigation-item-compare {
+  width: 105px;
+  background-image: url('../images/compare.svg');
+  margin-right: 36px;
+}
+
+.header-user-navigation-item-cart {
+  width: 99px;
+  background-image: url('../images/cart.svg');
+}
+
+.header-user-navigation-item-cart::after {
+  position: absolute;
+  left: 415px;
+  background-color: #ffffff;
+  content: "2";
+  border-radius: 50%;
+  font-size: 14px;
+  padding: 0 12px;
+  /* Не получилось сделать меньше белый кружок */
 }
 
 .header-navigation {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -112,14 +171,46 @@ body {
 .header-navigation-item {
   text-align: center;
   padding: 15px;
+  border: 2px solid transparent;
+}
+.header-navigation-item:hover {
+  opacity: 0.6;
+}
+.header-navigation-item:active {
+  opacity: 0.3;
+}
+.header-navigation-item:focus {
+  border: 2px solid #AF4FFF;
 }
 
 .header-navigation-item-catalog {
-  flex-grow: 1;
   text-align: left;
   padding-left: 0px;
+  margin-right: auto;
+  width: 293px;
+  padding: 15px;
+  border: 2px solid transparent;
+
 }
 
+.header-navigation-item-catalog::after {
+  position: absolute;
+  top: 5px;
+  left: 255px;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/plus.svg');
+  opacity: 0.3;
+  content: "";
+}
+
+.header-navigation-item-catalog:hover::after,
+.header-navigation-item-catalog:active::after {
+  opacity: 1;
+}
+.header-navigation-item-catalog:focus {
+  border: 2px solid #AF4FFF;
+}
 .header-navigation-item-contacts {
   padding-right: 0px;
 }
@@ -128,12 +219,6 @@ body {
   text-decoration: none;
   color: #000000;
 }
-
-/* .main-container {
-  width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 .main-container-inner {
   width: 1160px;
@@ -204,8 +289,9 @@ body {
 }
 
 .button {
+  position: relative;
+  display: inline-block;
   font-family: "raleway", Arial, sans-serif;
-  background-color: #FFE17F;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
@@ -214,7 +300,18 @@ body {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-align: center;
-
+  padding: 0 30px;
+  /* Как сделать фон кнопок сжатым по вертикали */
+}
+.button::before{
+  background-color: #FFE17F;
+  top: 5px;
+  left: 0px;
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 10px;
+  z-index: -1;
 }
 
 .product-params {
@@ -284,7 +381,7 @@ body {
 .services-list-item-current button {
   background-color: #000000;
   color: #FFE17F;
-  padding: 10px;
+  padding: 10px 30px;
   width: 100%;
   text-align: left;
 
@@ -303,13 +400,15 @@ body {
 }
 
 .services-btn {
+  /* display: inline-block; */
   font-family: raleway, Arial, sans-serif;
   text-align: center;
   font-size: 18px;
   font-weight: 800;
   text-transform: uppercase;
   border: none;
-  background-color: #FFE17F;
+  /* background-color: transparent;
+  width: 210px; */
 }
 
 .service-item-title {
@@ -441,13 +540,13 @@ body {
   line-height: 50px;
   color: #000000;
   font-weight: 800;
-  width: 50%;
+  /* width: 50%; */
 
 }
 
-.subscribe-description {
+/* .subscribe-description {
   width: 50%;
-}
+} */
 
 .subscribe-bottom {
   display: flex;
