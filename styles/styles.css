@@ -296,7 +296,6 @@ body {
   background-repeat: no-repeat;
   width: 20px;
   height: 60px;
-  /* z-index: 2; */
 }
 
 .slider-next {
@@ -399,10 +398,6 @@ body {
   margin-bottom: 40px;
   /* border-spacing: 12px 0; */
 }
-
-/* .product-params tr {
-  margin-bottom: 12px;
-} */
 
 .product-params td {
   font-size: 36px;
@@ -794,7 +789,7 @@ body {
 
 .footer-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 /* .footer-contacts {
@@ -823,27 +818,30 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
+  /* margin: 0; */
+  margin-right: auto;
 }
 
 .footer-social-list::before {
   width: 80px;
-  /* height: 10px; */
-  /* background-color: #FFC500; */
   content: "";
   border-bottom: solid 7px #FFC500;
+  /* margin-left: 424px; */
+
 }
 
 .footer-social-item {
   margin-right: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
 }
 
 .facebook {
   background-image: url("../images/facebook.svg");
   background-repeat: no-repeat;
   background-position: center;
-  /* width: 50px;
-  height: 50px; */
 }
 
 .instagram {
