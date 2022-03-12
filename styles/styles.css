@@ -30,9 +30,9 @@
   font-display: swap;
 }
 
-/* * {
+* {
   outline: 1px solid red;
-} */
+}
 
 html {
   height: 100%;
@@ -880,7 +880,7 @@ body {
   background-color: #EBEBEB;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 
 }
 
@@ -901,7 +901,8 @@ body {
   text-decoration: none;
   width: 40px;
   height: 40px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination-prev,
