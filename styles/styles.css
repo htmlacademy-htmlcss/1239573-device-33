@@ -246,6 +246,7 @@ body {
 
 .slider-item-right {
   width: 50%;
+  margin-top: 107px;
 }
 
 .slider-nav {
@@ -255,11 +256,32 @@ body {
 }
 
 .slider-nav-left {
+  position: relative;
   width: 50%;
   display: flex;
   justify-content: space-between;
 }
 
+.slider-prev {
+  position: absolute;
+  top: -350px;
+  background-image: url('../images/slider-left.svg');
+  background-position: center left;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 60px;
+}
+
+.slider-next {
+  position: absolute;
+  top: -350px;
+  left: 540px;
+  background-image: url('../images/slider-right.svg');
+  background-position: center right;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 60px;
+}
 .product-slogan {
   font-family: "raleway", Arial, sans-serif;
   font-size: 50px;
@@ -276,6 +298,27 @@ body {
 
 .slider-pagination {
   display: flex;
+  list-style-type: none;
+  position: relative;
+
+}
+
+.slider-pagination-button {
+  position: absolute;
+  background-image: url('../images/point-white.svg');
+  background-position: center right;
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
+  top: -203px;
+  left: -12px;
+}
+.slider-pagination-button-current {
+  background-image: url('../images/point-black.svg');
+  left: -76px;
+}
+.slider-pagination-button:nth-child(2) {
+  left: -44px;
 }
 
 .contacts h2 {
@@ -323,6 +366,10 @@ body {
 .product-params {
   margin-top: 50px;
   margin-bottom: 40px;
+  border-spacing: 12px;
+}
+.product-params tr {
+  margin-bottom: 12px;
 }
 
 .product-params td {
@@ -681,6 +728,7 @@ body {
   justify-content: space-between;
   font-style: normal;
   align-items: center;
+  margin-bottom: 60px;
 }
 .footer-address-text {
   margin: 0;
