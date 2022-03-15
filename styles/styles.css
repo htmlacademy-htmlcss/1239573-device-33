@@ -918,7 +918,10 @@ body {
   padding-bottom: 14px;
   
 }
-
+.subscribe-email:focus-visible {
+  outline: none;
+  border-bottom: 3px solid #000;
+}
 .subscribe-button {
   text-transform: uppercase;
   border: 3px solid #C4C4C4;
