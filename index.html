@@ -27,6 +27,8 @@
       <nav class="header-navigation">
         <a class="header-navigation-item-catalog" href="catalog.html">Каталог
           товаров</a>
+        <div class="header-navigation-sub">
+        </div>
         <a class="header-navigation-item header-navigation-item-delivery" href="#">Доставка</a>
         <a class="header-navigation-item header-navigation-item-warranty" href="#">Гарантия</a>
         <a class="header-navigation-item header-navigation-item-contacts" href="#">Контакты</a>
@@ -40,17 +42,17 @@
     <div class="main-container-inner">
       <section class="slider main-container-inner">
         <h2 class="visually-hidden">Слайдер товаров</h2>
-        <div class="slider-item">
-          <div class="slider-item-left">
+        <div class="slider-item slider-item-1">
+          <div class="slider-item-left slider-item-left-1">
             <img class="slider-image" src="images/quadrocopter.png" alt="Квадрокоптер" width="560" height="560">
           </div>
-          <div class="slider-item-right">
+          <div class="slider-item-right slider-item-right-1">
             <p class="product-slogan">Порхает как бабочка, жалит как пчела! </p>
             <p class="product-description">
               Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
               камеру.
             </p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button more-button" href="#">Подробнее</a>
             <table class="product-params">
               <tr>
                 <td>800 м</td>
@@ -63,10 +65,57 @@
             </table>
           </div>
         </div>
+        <div class="slider-item slider-item-2 visually-hidden">
+          <div class="slider-item-left slider-item-left-2">
+            <img class="slider-image" src="images/clever-watch.png" alt="Фитнес браслет" width="560" height="560">
+          </div>
+          <div class="slider-item-right slider-item-right-2">
+            <p class="product-slogan">Худеем правильно! </p>
+            <p class="product-description">
+              Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+            </p>
+            <a class="button" href="#">Подробнее</a>
+            <table class="product-params">
+              <tr>
+                <td>48 часов</td>
+              </tr>
+              <tr>
+                <th>Без подзарадки</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="slider-item slider-item-3 visually-hidden">
+          <div class="slider-item-left slider-item-left-3">
+            <img class="slider-image" src="images/selfie.png" alt="Селфи-палка" width="560" height="560">
+          </div>
+          <div class="slider-item-right slider-item-right-3">
+            <p class="product-slogan">Делай селфи, как Бен Стиллер! </p>
+            <p class="product-description">
+              Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
+              всего 5 кг.
+            </p>
+            <a class="button" href="#">Подробнее</a>
+            <table class="product-params">
+              <tr>
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
+              </tr>
+              <tr>
+                <th>Длина палки</th>
+                <th>Вес палки</th>
+                <th>Материал</th>
+              </tr>
+            </table>
+          </div>
+        </div>
         <div class="slider-nav">
           <div class="slider-nav-left">
-            <a class="slider-button slider-prev" href="index.html?slide=1">Предыдущее фото</a>
-            <a class="slider-button slider-next" href="index.html?slide=2">Следующее фото</a>
+            <div class="slider-nav-left-wrapper">
+              <a class="slider-button slider-prev" href="index.html?slide=1">Предыдущее фото</a>
+              <a class="slider-button slider-next" href="index.html?slide=2">Следующее фото</a>
+            </div>
           </div>
           <div class="slider-pagination">
             <a class="slider-pagination-button slider-pagination-button-current" href="index.html?slider=1">Первый
@@ -90,48 +139,50 @@
         </div>
       </section>
     </div>
-    <div class="main-container-inner">
-      <section class="services">
-        <h2 class="visually-hidden">Услуги</h2>
-        <dl class="services-list">
-          <dt class="services-list-delivery services-list-item-current">
-            <button class="button" type="button">Доставка</button>
-          </dt>
-          <dd class="services-items">
-            <h3 class="service-item-title">Доставка</h3>
-            <p class="service-item-description">
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
-              заработаем, поднимая его на ваш этаж.
-            </p>
-          </dd>
-          <dt class="services-list-warranty">
-            <button class="button" type="button">Гарантия</button>
-          </dt>
-          <dd class="services-items visually-hidden">
-            <h3 class="service-item-title">Гарантия</h3>
-            <p class="service-item-description">
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
-              заработаем, поднимая его на ваш этаж.
-            </p>
-          </dd>
-          <dt class="services-list-credit">
-            <button class="button" type="button">Кредит</button>
-          </dt>
-          <dd class="services-items visually-hidden">
-            <h3 class="service-item-title">Кредит</h3>
-            <p class="service-item-description">
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
-              заработаем, поднимая его на ваш этаж.
-            </p>
-          </dd>
-        </dl>
-      </section>
+    <div class="inner-nofull-grey">
+      <div class="main-container-inner">
+        <section class="services">
+          <h2 class="visually-hidden">Услуги</h2>
+          <dl class="services-list">
+            <dt class="services-list-item services-list-delivery services-list-item-current ">
+              <button class="button-left-nav-current" type="button">Доставка</button>
+            </dt>
+            <dd class="services-items services-items-delivery">
+              <h3 class="service-item-title">Доставка</h3>
+              <p class="service-item-description">
+                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
+                заработаем, поднимая его на ваш этаж.
+              </p>
+            </dd>
+            <dt class="services-list-item services-list-warranty">
+              <button class="button button-left-nav" type="button">Гарантия</button>
+            </dt>
+            <dd class="services-items services-items-warranty visually-hidden">
+              <h3 class="service-item-title">Гарантия</h3>
+              <p class="service-item-description">
+                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+                Товар, не дом, конечно же.
+              </p>
+            </dd>
+            <dt class="services-list-item services-list-credit">
+              <button class="button button-left-nav" type="button">Кредит</button>
+            </dt>
+            <dd class="services-items services-items-credit visually-hidden">
+              <h3 class="service-item-title">Кредит</h3>
+              <p class="service-item-description">
+                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
+                кредита. Выгодные для банка, разумеется.
+              </p>
+            </dd>
+          </dl>
+        </section>
+      </div>
     </div>
     <div class="main-container-inner">
       <section class="delivery-extra">
         <p>Доставим редкий товар под заказ</p>
       </section>
-    </div>>
+    </div>
     <div class="main-container-inner">
       <div class="about-contact">
         <section class="about">
@@ -144,10 +195,10 @@
             <li>СДИК</li>
             <li>ТоксБерри</li>
           </ul>
-          <a class="button" href="#">Подробнее о нас</a>
+          <a class="button more-about-button" href="#">Подробнее о нас</a>
         </section>
         <section class="contacts">
-          <div class="black-line"></div>
+          <!-- <div class="black-line"></div> -->
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки. </p>
           <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
@@ -160,14 +211,13 @@
             <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
             <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
           </ul>
-          <a class="button" href="#">Напишите нам</a>
+          <a class="button button-write-us" href="#">Напишите нам</a>
         </section>
       </div>
     </div>
     <div class="inner-full-grey">
       <div class="main-container-inner">
         <section class="subscribe">
-
           <div class="subscribe-top">
             <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
             <p class="subscribe-description">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
@@ -181,7 +231,6 @@
             </form>
             <p>Это бесплатно</p>
           </div>
-
         </section>
       </div>
     </div>

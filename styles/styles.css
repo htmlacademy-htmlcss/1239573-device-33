@@ -61,6 +61,52 @@ body {
   overflow: hidden;
 }
 
+.button {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  font-family: "raleway", Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  /* padding: 0 30px; */
+  /* width: 210px; */
+  border: 2px solid transparent;
+  
+  
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  background-color: #FFE17F;
+  z-index: -1; 
+  width: inherit;
+  height: 8px;    
+  top: 50%;
+  left: 0;  
+  margin-top: -5px;
+}
+.button:hover::before {
+  top: 0;
+  height: 40px;
+  margin: 0;
+}
+.button:active::before {
+  background-color: #FFCC33;
+}
+/* .button:focus {
+  border: 2px solid #AF4FFF;
+} */
+
 .header-container {
   color: #000000;
   background-color: #FFE17F;
@@ -69,17 +115,21 @@ body {
   width: 1040px;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px 60px;
+  padding: 0 60px;
+  margin-top: 40px;
 }
 
 .logo {
-  display: block;
+  /* display: block; */
+  position: absolute;
   border: 2px solid transparent;
+  top: 15px;
   /* пришлось добавить прозрачный border,
   чтобы лого не "прыгал" при наведении,
   не получилось сделать через box-sizing: border-box; */
   width: 145px;
   height: 36px;
+  z-index: 1;
 }
 
 .logo:hover {
@@ -95,19 +145,67 @@ body {
 }
 
 .header-top {
+  position: relative;
   display: flex;
-  /* padding: 30px 0; */
-  margin-top: 30px;
+  padding-top: 30px;
   margin-bottom: 30px;
 }
 
 .search-form {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 357px auto;
   width: 560px;
   box-sizing: border-box;
+  
 }
 
+.main-header-search {
+  border-radius: 50px 0px 0px 50px;
+  background: transparent;
+  border: 2px solid #000;  
+  font-size: 16px;  
+  font-family: "rubik", Arial, sans-serif;
+  padding-left: 48px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: center left 16px;
+}
+/* .main-header-search::placeholder {
+  color: #000;
+} */
+
+.main-header-search:active {
+  /* border: 2px solid #AF4FFF;   */
+  box-shadow: 0 0 0 2px #AF4FFF;
+}
+.main-header-search:disabled {
+  opacity: 0.3;
+}
+.search-button {
+  border-radius: 0px 20px 20px 0px;
+  background: transparent;
+  border: 2px solid #000;
+  border-left: none;
+  font-size: 16px; 
+  line-height: 20px;
+  font-family: "rubik", Arial, sans-serif;
+  cursor: pointer;
+}
+.search-button:hover {
+  color: #ffffff;
+  background-color: #000;  
+}
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000;
+}
+
+.search-button:disabled {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000;
+}
 .header-user-navigation {
   position: relative;
   width: 600px;
@@ -188,6 +286,28 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+/* изначально думал про такую реализацию 
+ .header-navigation::after {
+  content: "";
+  background-color: #FFE17F;
+  position: absolute;
+  width: 1160px;
+  height: 136px;
+  top: 66px;
+  left: -60px;
+  z-index: -1;
+} */
+
+.header-navigation-sub {
+  content: "";
+  background-color: #FFE17F;
+  position: absolute;
+  width: 1160px;
+  height: 136px;
+  top: 60px;
+  left: -60px;
+  z-index: -1;
+}
 
 .header-navigation-item {
   text-align: center;
@@ -214,13 +334,14 @@ body {
   width: 293px;
   padding: 15px;
   border: 2px solid transparent;
+  padding-left: 0;
 
 }
 
 .header-navigation-item-catalog::after {
   position: absolute;
   top: 5px;
-  left: 255px;
+  left: 250px;
   width: 50px;
   height: 50px;
   background-image: url("../images/plus.svg");
@@ -257,7 +378,8 @@ body {
 }
 
 .slider-item-left {
-  width: 50%;
+  width: 560px;
+  margin-right: 40px;
 }
 
 .slider-image {
@@ -266,10 +388,32 @@ body {
 
 .slider-item-right {
   width: 50%;
-  margin-top: 107px;
+  padding-top: 20px;
+  
 }
 
+.slider-item-right::before {
+  content: "";
+  position: relative;
+  top: 40px;
+  left: 300px;
+  z-index: -1;
+  font-weight: 700;
+  font-size: 180px;
+  color: #ffffff;
+}
+
+.slider-item-right-1::before{
+  content: "01";
+}
+.slider-item-right-2::before{
+  content: "02";
+}
+.slider-item-right-3::before{
+  content: "03";
+}
 .slider-nav {
+  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -277,9 +421,17 @@ body {
 
 .slider-nav-left {
   position: relative;
+  top: 50%;
   width: 50%;
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+.slider-nav-left-wrapper {
+  position:absolute;
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  bottom: 280px;
 }
 
 .slider-button,
@@ -291,8 +443,8 @@ body {
 }
 
 .slider-prev {
-  position: absolute;
-  top: -350px;
+  /* position: absolute;
+  top: -350px; */
   background-image: url("../images/slider-left.svg");
   background-position: center left;
   background-repeat: no-repeat;
@@ -301,9 +453,9 @@ body {
 }
 
 .slider-next {
-  position: absolute;
+  /* position: absolute;
   top: -350px;
-  right: 20px;
+  right: 20px; */
   background-image: url("../images/slider-right.svg");
   background-position: center right;
   background-repeat: no-repeat;
@@ -323,6 +475,9 @@ body {
 
 .product-description {
   margin-bottom: 50px;
+}
+.more-button {
+  width: 210px;
 }
 
 .slider-pagination {
@@ -352,6 +507,12 @@ body {
   left: -44px;
 }
 
+.more-about-button {
+  width: 270px;
+}
+.button-write-us {
+  width: 260px;
+}
 .contacts h2 {
   font-family: "raleway", Arial, sans-serif;
   font-size: 50px;
@@ -366,33 +527,6 @@ body {
 
 .contacts-address-text {
   font-style: normal;
-}
-
-.button {
-  position: relative;
-  display: inline-block;
-  font-family: "raleway", Arial, sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #000000;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-align: center;
-  padding: 0 30px;
-  /* Как сделать фон кнопок сжатым по вертикали */
-}
-
-.button::before {
-  background-color: #FFE17F;
-  top: 5px;
-  left: 0px;
-  content: "";
-  position: absolute;
-  width: 210px;
-  height: 10px;
-  z-index: -1;
 }
 
 .product-params {
@@ -482,13 +616,18 @@ body {
 .quadro::before {
   background-image: url("../images/copters.svg");
 }
+.inner-nofull-grey {
+  background: linear-gradient(to top, #F0F0F0 75%, #ffffff 25%);
+  padding-bottom: 70px;
+  margin-bottom: 70px;
 
+}
 .services-list {
   position: relative;
   display: grid;
   grid-template-columns: 280px 1fr;
   grid-gap: 35px 0;
-  margin-bottom: 142px;
+  
 }
 
 .services-list-delivery {
@@ -497,16 +636,25 @@ body {
   padding-top: 64px;
 }
 
-.services-list-delivery::after {
+.services-items::after {
   position: absolute;
-  background-image: url("../images/delivery.svg");
   width: 200px;
   height: 200px;
   content: "";
   background-repeat: no-repeat;
   left: 950px;
+  top: 60px;
 }
 
+.services-items-delivery::after {
+  background-image: url("../images/delivery.svg");
+}
+.services-items-warranty::after {
+  background-image: url("../images/warranty.svg");
+}
+.services-items-credit::after {
+  background-image: url("../images/credit.svg");
+}
 .services-list-warranty {
   grid-column: 1/2;
   grid-row: 2/3;
@@ -518,18 +666,31 @@ body {
   padding-bottom: 64px;
 }
 
-.services-list button {
+/* .button-left-nav {
   border: none;
   background-color: transparent;
-}
+} */
 
-.services-list-item-current button {
-  background-color: #000000;
+.button-left-nav-current {
   color: #FFE17F;
-  padding: 10px 30px;
+  padding-left: 20px;
+  border: none;
+  background-color: #000000;
   width: 100%;
   text-align: left;
+  font-family: "raleway", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  cursor: pointer;
 
+}
+.button-left-nav {
+  width: 160px;
 }
 
 .services-items {
@@ -542,15 +703,8 @@ body {
   padding-top: 64px;
   padding-bottom: 64px;
   padding-left: 116px;
-}
+  align-self: center;
 
-.services-btn {
-  font-family: raleway, Arial, sans-serif;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 800;
-  text-transform: uppercase;
-  border: none;
 }
 
 .service-item-title {
@@ -626,6 +780,7 @@ body {
 
 .about-contact {
   display: flex;
+  margin-bottom: 80px;
 }
 
 .about {
@@ -707,8 +862,9 @@ body {
 }
 
 .subscribe-top {
-  display: flex;
-  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 64px;
   margin-bottom: 144px;
   align-items: baseline;
 
@@ -720,19 +876,20 @@ body {
   line-height: 50px;
   color: #000000;
   font-weight: 800;
-
+  margin: 0;
+  margin-right: 170px;
 }
 
-/* .subscribe-description {
-  width: 50%;
-} */
+.subscribe-description {
+ margin: 0;
+}
 
 .subscribe-bottom {
   display: flex;
 }
 
 .subscribe-bottom p {
-  display: inline-block;
+  /* display: inline-block; */
   margin: 0;
   margin-left: auto;
   background-image: url("../images/check.svg");
@@ -740,17 +897,43 @@ body {
   background-position: center left;
   width: 160px;
   text-align: end;
+  align-self: center;
 }
 
 .subscribe-form {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 557px auto;
   width: 810px;
   box-sizing: border-box;
 }
 
+.subscribe-email {
+  border: none;
+  background-color: transparent;
+  border-bottom: 3px solid #C4C4C4;
+  font-size: 16px;  
+  font-family: "rubik", Arial, sans-serif;
+  padding-left: 16px;
+  padding-top: 11px;
+  padding-bottom: 14px;
+  
+}
+
 .subscribe-button {
   text-transform: uppercase;
+  border: 3px solid #C4C4C4;
+  font-family: raleway, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  
+}
+.subscribe-button:hover {
+  border-color: #000000;
+}
+.subscribe-button:active {
+  opacity: 0.3;
 }
 
 .footer {
@@ -1011,6 +1194,7 @@ body {
   top: 10px;
 }
 
+/* не получилось удалить последнюю стрелку */
 /* .breadcrumbs-link:nth-last-child()::after {
 
 } */
