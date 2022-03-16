@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  font-family: rubik, Arial, sans-serif;
+  font-family: "rubik", Arial, sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #444444;
@@ -77,8 +77,6 @@ body {
   font-size: 18px;
   text-align: center;
   cursor: pointer;
-  /* padding: 0 30px; */
-  /* width: 210px; */
   border: 2px solid transparent;
   
   
@@ -126,11 +124,33 @@ body {
   z-index: 1;
 }
 
-.logo:hover {
+.logo:hover,
+.header-user-navigation-item:hover,
+.navigation-sub-column a:hover,
+.header-navigation-item:hover,
+.slider-pagination-button:hover,
+.logo-footer:hover,
+.breadcrumbs-link:hover, 
+.product-card-inner:hover,
+.categories-link:active,
+.delivery-extra p:active,
+.slider-button:hover {
   opacity: 0.6;
 }
 
-.logo:active {
+.logo:active,
+.header-user-navigation-item:active,
+.navigation-sub-column a:active,
+.header-navigation-item:active,
+.slider-pagination-button:active, 
+.subscribe-button:active, 
+.logo-footer:active, 
+.breadcrumbs-link:active,
+.product-card:active, 
+.show-more:active, 
+.pagination-prev:active,
+.pagination-next:active,
+.slider-button:active {
   opacity: 0.3;
 }
 
@@ -201,12 +221,13 @@ body {
   background-color: #000;
 }
 .header-user-navigation {
-  position: relative;
+  /* position: relative; */
   width: 600px;
   display: flex;
   flex-wrap: wrap;
   margin: 5px 0;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-user-navigation-item {
@@ -214,15 +235,16 @@ body {
   background-repeat: no-repeat;
   background-position: center left;
   border: 2px solid transparent;
+  padding-left: 20px;
 }
 
-.header-user-navigation-item:hover {
+/* .header-user-navigation-item:hover {
   opacity: 0.6;
-}
+} */
 
-.header-user-navigation-item:active {
-  opacity: 0.3;
-}
+/* .header-user-navigation-item:active {
+  opacity: 0.3; 
+}*/
 
 .header-user-navigation-item:focus {
   border: 2px solid #AF4FFF;
@@ -230,7 +252,6 @@ body {
 
 .header-user-navigation-item-login {
   margin-right: auto;
-  width: 81px;
   background-image: url("../images/login.svg");
   margin-left: 26px;
 }
@@ -248,25 +269,24 @@ body {
 }
 
 .header-user-navigation-item-compare {
-  width: 105px;
   background-image: url("../images/compare.svg");
   margin-right: 36px;
 }
 
 .header-user-navigation-item-cart {
-  width: 99px;
   background-image: url("../images/cart.svg");
+  padding-left: 6px;
+  
 }
 
-.header-user-navigation-item-cart::after {
-  position: absolute;
-  right: 95px;
+.header-user-navigation-item-cart::before {
+  position: relative;
+  left: -20px;
   background-color: #ffffff;
   content: "2";
   border-radius: 50%;
   font-size: 14px;
-  padding: 0 12px;
-  /* Не получилось сделать меньше белый кружок */
+  padding: 1px 6px;
 }
 
 .header-navigation {
@@ -325,12 +345,12 @@ body {
   padding: 10px;
   padding-left: 0;
 }
-.navigation-sub-column a:hover {
+/* .navigation-sub-column a:hover {
   opacity: 0.6;
-}
-.navigation-sub-column a:active {
-  opacity: 0.3;
-}
+} */
+/* .navigation-sub-column a:active {
+  opacity: 0.3; 
+}*/
 
 .header-navigation-item {
   text-align: center;
@@ -338,13 +358,13 @@ body {
   border: 2px solid transparent;
 }
 
-.header-navigation-item:hover {
+/* .header-navigation-item:hover {
   opacity: 0.6;
-}
+} */
 
-.header-navigation-item:active {
+/* .header-navigation-item:active {
   opacity: 0.3;
-}
+} */
 
 .header-navigation-item:focus {
   border: 2px solid #AF4FFF;
@@ -509,29 +529,27 @@ body {
 
 .slider-pagination {
   display: flex;
-  list-style-type: none;
-  position: relative;
-
+  flex-wrap: wrap;
 }
 
 .slider-pagination-button {
-  position: absolute;
-  background-image: url("../images/point-white.svg");
-  background-position: center right;
-  background-repeat: no-repeat;
+  position: relative;
+  background-color: #ffffff;
+  border: #000 solid 2px;
+  border-radius: 50%;
   width: 12px;
   height: 12px;
-  top: -210px;
-  left: -12px;
+  top: -200px;
+  margin-right: 20px;
 }
-
+/* .slider-pagination-button:hover {
+  opacity: 0.6;
+} */
+/* .slider-pagination-button:active {
+  opacity: 0.3;
+} */
 .slider-pagination-button-current {
-  background-image: url("../images/point-black.svg");
-  left: -76px;
-}
-
-.slider-pagination-button:nth-child(2) {
-  left: -44px;
+  background-color: #000000;
 }
 
 .more-about-button {
@@ -559,6 +577,8 @@ body {
 .product-params {
   margin-top: 50px;
   margin-bottom: 40px;
+  border-spacing: 20px 0;
+  margin-left: -20px;
 }
 
 .product-params td {
@@ -573,6 +593,7 @@ body {
   Line-height: 30px;
   color: #444444;
   font-weight: 400;
+  text-align: left;
 }
 
 .categories-list {
@@ -607,9 +628,9 @@ body {
   margin-bottom: 33px;
 }
 
-.categories-link:active {
+/* .categories-link:active {
   opacity: 0.6;
-}
+} */
 
 .categories-link:focus {
   border: 2px solid #AF4FFF;
@@ -729,7 +750,7 @@ body {
 }
 
 .service-item-title {
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 50px;
   color: #000000;
   font-weight: 800;
@@ -781,9 +802,9 @@ body {
   background-color: #FFC500;
 }
 
-.delivery-extra p:active {
+/* .delivery-extra p:active {
   opacity: 0.6;
-}
+} */
 
 .delivery-extra p:focus {
   border: 2px solid #AF4FFF;
@@ -819,7 +840,7 @@ body {
 }
 
 .about h2 {
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
@@ -887,12 +908,12 @@ body {
   grid-template-columns: 50% 50%;
   padding-top: 64px;
   margin-bottom: 144px;
-  align-items: baseline;
+  align-items: center;
 
 }
 
 .subscribe-title {
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
@@ -945,7 +966,7 @@ body {
 .subscribe-button {
   text-transform: uppercase;
   border: 3px solid #C4C4C4;
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
@@ -955,9 +976,9 @@ body {
 .subscribe-button:hover {
   border-color: #000000;
 }
-.subscribe-button:active {
+/* .subscribe-button:active {
   opacity: 0.3;
-}
+} */
 
 .footer {
   background-color: #444444;
@@ -979,17 +1000,17 @@ body {
   margin-bottom: 35px;
 }
 
-.logo-footer:hover {
-  opacity: 0.6;
-}
+/* .logo-footer:hover {
+  opacity: 0.6; 
+}*/
 
 .logo-footer:focus {
   border: 2px solid #AF4FFF;
 }
 
-.logo-footer:active {
-  opacity: 0.3;
-}
+/* .logo-footer:active {
+  opacity: 0.3; 
+}*/
 
 
 .footer-address {
@@ -1023,7 +1044,7 @@ body {
 .footer-nav-list {
   display: flex;
   flex-wrap: wrap;
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 21px;
@@ -1160,7 +1181,7 @@ body {
 }
 
 .inner-header-title {
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
@@ -1188,13 +1209,13 @@ body {
   
 }
 
-.breadcrumbs-link:hover {
+/* .breadcrumbs-link:hover {
   opacity: 0.6;
-}
+} */
 
-.breadcrumbs-link:active {
-  opacity: 0.3;
-}
+/* .breadcrumbs-link:active {
+  opacity: 0.3; 
+}*/
 
 .breadcrumbs-link:focus {
   border: 2px solid #AF4FFF;
@@ -1282,7 +1303,7 @@ body {
 }
 
 .catalog-products h2 {
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 16px;
   color: #000000;
 }
@@ -1318,7 +1339,7 @@ body {
 .product-card-inner:hover::after {
   position: absolute;
   content: "Подробнее";
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 18spx;
   color: #000000;
   width: 200px;
@@ -1334,17 +1355,17 @@ body {
   padding-top: -20px;
 }
 
-.product-card-inner:hover {
-  opacity: 0.6;
-}
+/* .product-card-inner:hover {
+  opacity: 0.6; 
+}*/
 
 .product-card-image {
   border: 1px solid #444444;
 }
 
-.product-card:active {
+/* .product-card:active {
   opacity: 0.3;
-}
+} */
 .product-card:focus {
   border: 2px solid #AF4FFF;
 }
@@ -1370,7 +1391,7 @@ body {
 
 .show-more {
   grid-column: 1/-1;
-  font-family: raleway, Arial, sans-serif;
+  font-family: "raleway", Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
   color: #000000;
@@ -1387,9 +1408,9 @@ body {
   border-color: #000;
 }
 
-.show-more:active {
-  opacity: 0.3;
-}
+/* .show-more:active {
+  opacity: 0.3; 
+}*/
 
 .show-more:focus {
   border-color: #AF4FFF;
@@ -1460,10 +1481,10 @@ body {
   background-color: #DCDCDC;
 }
 
-.pagination-prev:active,
+/* .pagination-prev:active,
 .pagination-next:active {
   opacity: 0.3;
-}
+} */
 
 .pagination-prev:focus,
 .pagination-next:focus {
