@@ -110,8 +110,6 @@ body {
 .header-container {
   color: #000000;
   background-color: #FFE17F;
-  /* непонятно как сделать фон "сдвинутым",
-  чтобы наезжал на лого и "Порхает" */
   width: 1040px;
   margin-left: auto;
   margin-right: auto;
@@ -120,13 +118,9 @@ body {
 }
 
 .logo {
-  /* display: block; */
   position: absolute;
   border: 2px solid transparent;
   top: 15px;
-  /* пришлось добавить прозрачный border,
-  чтобы лого не "прыгал" при наведении,
-  не получилось сделать через box-sizing: border-box; */
   width: 145px;
   height: 36px;
   z-index: 1;
@@ -286,27 +280,56 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-/* изначально думал про такую реализацию 
- .header-navigation::after {
-  content: "";
-  background-color: #FFE17F;
-  position: absolute;
-  width: 1160px;
-  height: 136px;
-  top: 66px;
-  left: -60px;
-  z-index: -1;
-} */
 
-.header-navigation-sub {
+.slider::before {
+  width: 1040px;
+  position: absolute;
+  background-color: #FFE17F;
+  padding-bottom: 134px;
+  padding-left: 60px;
+  padding-right: 60px;
+  z-index: -1;
   content: "";
+}
+.header-navigation-sub {
+  display: none;
+  flex-wrap: wrap;
   background-color: #FFE17F;
   position: absolute;
-  width: 1160px;
-  height: 136px;
-  top: 60px;
+  width: 100%;
+  top: 64px;
   left: -60px;
-  z-index: -1;
+  padding-left: 60px;
+  padding-right: 60px;
+  z-index: 1;
+}
+.navigation-sub-column {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+.navigation-sub-column:first-child {
+  width: 222px;
+}
+.navigation-sub-column a {
+  font-family: "rubik", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: normal;
+  text-transform: none;
+  padding: 10px;
+  padding-left: 0;
+}
+.navigation-sub-column a:hover {
+  opacity: 0.6;
+}
+.navigation-sub-column a:active {
+  opacity: 0.3;
 }
 
 .header-navigation-item {
@@ -335,13 +358,14 @@ body {
   padding: 15px;
   border: 2px solid transparent;
   padding-left: 0;
+  position: relative;
 
 }
 
 .header-navigation-item-catalog::after {
   position: absolute;
-  top: 5px;
-  left: 250px;
+  top: 3px;
+  right: 15px;
   width: 50px;
   height: 50px;
   background-image: url("../images/plus.svg");
@@ -352,6 +376,17 @@ body {
 .header-navigation-item-catalog:hover::after,
 .header-navigation-item-catalog:active::after {
   opacity: 1;
+}
+.header-navigation-item-catalog:hover::after,
+.header-navigation-item-catalog:focus-within::after {
+  background-image: url("../images/minus.svg");
+}
+.header-navigation-item-catalog:hover +.header-navigation-sub {
+  display: flex;
+}
+
+.header-navigation-sub:hover {
+  display: flex;
 }
 
 .header-navigation-item-catalog:focus {
@@ -413,7 +448,6 @@ body {
   content: "03";
 }
 .slider-nav {
-  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -423,8 +457,6 @@ body {
   position: relative;
   top: 50%;
   width: 50%;
-  /* display: flex; */
-  /* justify-content: space-between; */
 }
 .slider-nav-left-wrapper {
   position:absolute;
@@ -443,8 +475,6 @@ body {
 }
 
 .slider-prev {
-  /* position: absolute;
-  top: -350px; */
   background-image: url("../images/slider-left.svg");
   background-position: center left;
   background-repeat: no-repeat;
@@ -453,9 +483,6 @@ body {
 }
 
 .slider-next {
-  /* position: absolute;
-  top: -350px;
-  right: 20px; */
   background-image: url("../images/slider-right.svg");
   background-position: center right;
   background-repeat: no-repeat;
@@ -532,7 +559,6 @@ body {
 .product-params {
   margin-top: 50px;
   margin-bottom: 40px;
-  /* border-spacing: 12px 0; */
 }
 
 .product-params td {
@@ -665,11 +691,6 @@ body {
   grid-row: 3/4;
   padding-bottom: 64px;
 }
-
-/* .button-left-nav {
-  border: none;
-  background-color: transparent;
-} */
 
 .button-left-nav-current {
   color: #FFE17F;
@@ -889,7 +910,6 @@ body {
 }
 
 .subscribe-bottom p {
-  /* display: inline-block; */
   margin: 0;
   margin-left: auto;
   background-image: url("../images/check.svg");
@@ -1165,6 +1185,7 @@ body {
   text-decoration: none;
   color: #000000;
   border: 2px solid transparent;
+  
 }
 
 .breadcrumbs-link:hover {
@@ -1182,6 +1203,8 @@ body {
 .breadcrumbs-item {
   margin-right: 36px;
   position: relative;
+  /* z-index: -1; */
+  /* cursor: pointer; */
 
 }
 
@@ -1426,9 +1449,6 @@ body {
   font-weight: 800;
   font-size: 18px;
   color: #000000;
-  /* justify-content: center;
-  align-items: center;
-  text-decoration: none; */
   text-transform: uppercase;
   width: 140px;
   letter-spacing: 0.2em;
