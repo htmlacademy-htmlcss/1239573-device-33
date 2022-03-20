@@ -124,7 +124,7 @@ body {
 .slider-pagination-button:hover,
 .logo-footer:hover,
 .breadcrumbs-link:hover,
-.product-card-inner:hover,
+/* .product-card-inner:hover, */
 .categories-link:active,
 .delivery-extra p:active,
 .slider-button:hover,
@@ -142,7 +142,7 @@ body {
 .subscribe-button:active,
 .logo-footer:active,
 .breadcrumbs-link:active,
-.product-card:active,
+/* .product-card-inner:active, */
 .show-more:active,
 .pagination-prev:active,
 .pagination-next:active,
@@ -1482,18 +1482,20 @@ body {
   position: relative;
 }
 
-.product-card-hover-button {
+.product-card-inner:hover {
+  opacity: 0.6;
+}
+.product-card:hover::before {
   position: absolute;
   content: "Подробнее";
   font-family: "raleway", Arial, sans-serif;
   font-size: 18px;
   color: #000000;
-  display: none;
   width: 200px;
   text-transform: uppercase;
   left: 50px;
   top: 180px;
-  z-index: 0;
+  z-index: 1;
   letter-spacing: 0.2em;
   text-align: center;
   padding-left: 30px;
@@ -1501,43 +1503,24 @@ body {
   padding-top: -20px;
   cursor: pointer;
 }
-
-.product-card-hover-button::after {
+.product-card:hover::after{
   content: "";
   position: absolute;
   background-color: #FFE17F;
-  z-index: -1;
+  z-index: 0;
   width: 220px;
   height: 8px;
-  top: 50%;
-  left: 20px;
+  top: 194px;
+  left: 65px;
   margin-top: -4px;
 }
-
-.product-card-inner:hover + .product-card-hover-button{
-  display: block;
-}
-
-.product-card-hover-button:hover {
-  display: block;
-}
-
-.product-card-hover-button:hover::before {
-  top: 0;
-  height: 40px;
-  margin: 0;
-}
-
-/* .button:hover::before {
-  top: 0;
-  height: 40px;
-  margin: 0;
-} */
-
-.product-card-hover-button:active::before {
+.product-card:active::after{
   background-color: #FFCC33;
 }
 
+.product-card-link {
+  text-decoration: none;
+}
 
 .product-card-title {
   width: 226px;
