@@ -162,6 +162,7 @@ body {
 .main-header-search:focus, 
 .search-button:focus,
 .search-button:focus-visible, 
+.navigation-sub-column a:focus,
 .logo:focus-visible, 
 .logo:focus, 
 .header-user-navigation-item:focus,
@@ -702,6 +703,9 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: 280px 1fr;
+  
+  align-items: start;
+  
   grid-gap: 32px 0;
   margin: 0;
 }
@@ -719,9 +723,8 @@ body {
   content: "";
   background-repeat: no-repeat;
   right: -1px;
-  top: 89px;
+  bottom: 53px;
 }
-
 .services-items-delivery::after {
   background-image: url("../images/delivery.svg");
 }
@@ -742,7 +745,7 @@ body {
 .services-list-credit {
   grid-column: 1/2;
   grid-row: 3/4;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
 }
 
 .button-left-nav-current {
@@ -772,7 +775,7 @@ body {
 
 .services-items {
   grid-column: 2/-1;
-  grid-row: 1/4;
+  grid-row: 1/5;
   border-left-style: solid;
   border-left-color: #000;
   border-width: 7px;
@@ -797,6 +800,7 @@ body {
 .service-item-description {
   width: 453px;
 }
+
 
 .delivery-extra {
   position: relative;
@@ -1776,7 +1780,7 @@ body {
 
 .field-group-2 {
   width: 360px;
-  margin: 0;
+  margin: 0;  
 }
 
 .field-group-3 {
@@ -1816,8 +1820,17 @@ body {
   font: inherit;
   font-size: 16px;
 }
-.delivery-form-field:focus {
+.delivery-form-field:focus-visible {
   outline: 2px solid #AF4FFF;
+}
+.delivery-form-field:hover {
+  background-color: #DCDCDC;
+}
+.delivery-form-field:invalid {
+  outline: 2px solid #FF3D3D;
+}
+.delivery-form-field:disabled {
+  opacity: 0.3;
 }
 
 .delivery-form-field-name {
@@ -1829,6 +1842,10 @@ body {
   background-image: url("../images/form-email-field.svg");
   background-repeat: no-repeat;
   background-position: center right 20px;
+}
+
+.delivery-form-field-email::after {
+  content: "Забавный у вас адрес";
 }
 
 .delivery-form-field::placeholder {
@@ -1855,9 +1872,7 @@ body {
   border: none;
   cursor: pointer;
 }
-.count-button:active {
-  outline: 2px solid #AF4FFF;
-}
+.count-button:active, 
 .count-button:focus-visible {
   outline: 2px solid #AF4FFF;
 }
